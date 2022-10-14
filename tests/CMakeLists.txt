@@ -2,3 +2,6 @@ add_executable(utility_fuzzer_test utility_fuzzer_test.c)
 target_link_libraries(utility_fuzzer_test utility)
 target_compile_options(utility_fuzzer_test PRIVATE -fsanitize=address,fuzzer)
 target_link_options(utility_fuzzer_test PRIVATE -fsanitize=address,fuzzer)
+
+add_test(NAME utility_fuzzer_test COMMAND fuzzer_test)
+
