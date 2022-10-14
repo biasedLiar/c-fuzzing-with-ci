@@ -9,8 +9,8 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
   memcpy(str, data, size);                             // Copy fuzzer data to string
   str[size] = '\0';                                    // Set last byte of allocated string to '\0'
 
-  charEncode("lik input men der &, < og > er erstattet");
-  // charEncode(str);
+  // charEncode("lik input men der &, < og > er erstattet");
+  charEncode(str);
 
   free(str);
 
